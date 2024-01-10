@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+  color-scheme: dark light;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+div.text {
+  margin-block: 1.5rem;
+  background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+  background-size: 300%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  -moz-animation: animated_text 10s ease-in-out infinite;
+  -webkit-animation: animated_text 10s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
+}
+
+form {
+  text-align: center;
+  margin-block: 1.5rem;
+}
+
+input {
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+  background-color: #f0f0f0;
+  padding: 1rem 1.25rem;
+  color: #0f0f0f;
+  cursor: pointer;
+
+  display: inline-block;
+  margin: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 3rem;
+}
+
+@media (max-width: 500px) {
+  div.text {
+    font-size: 2.5rem;
+  }
+  input {
+    font-size: 1rem;
+  }
+}

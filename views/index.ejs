@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+  <% if (locals.bandName) { %>
+  <div class="text"><%= bandName %></div>
+  <% } else { %>
+  <div class="text">Welcome to Band Name generator</div>
+  <% } %>
+
+  <div>
+    <form action="/submit" method="post">
+      <input type="submit" value="Generate Name" />
+    </form>
+  </div>
+</main>
+
+<%- include("partials/footer.ejs") %>
